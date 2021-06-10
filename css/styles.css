@@ -1,0 +1,250 @@
+
+/* livvic-regular - latin */
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/livvic-v8-latin-regular.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/livvic-v8-latin-regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/livvic-v8-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/livvic-v8-latin-regular.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/livvic-v8-latin-regular.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/livvic-v8-latin-regular.svg#Livvic") format("svg"); /* Legacy iOS */
+}
+/* livvic-500 - latin */
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/livvic-v8-latin-500.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/livvic-v8-latin-500.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/livvic-v8-latin-500.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/livvic-v8-latin-500.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/livvic-v8-latin-500.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/livvic-v8-latin-500.svg#Livvic") format("svg"); /* Legacy iOS */
+}
+/* livvic-600 - latin */
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/livvic-v8-latin-600.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/livvic-v8-latin-600.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/livvic-v8-latin-600.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/livvic-v8-latin-600.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/livvic-v8-latin-600.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/livvic-v8-latin-600.svg#Livvic") format("svg"); /* Legacy iOS */
+}
+/* livvic-700 - latin */
+@font-face {
+  font-family: "Livvic";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/livvic-v8-latin-700.eot"); /* IE9 Compat Modes */
+  src:
+       url("../fonts/livvic-v8-latin-700.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+       url("../fonts/livvic-v8-latin-700.woff2") format("woff2"), /* Super Modern Browsers */
+       url("../fonts/livvic-v8-latin-700.woff") format("woff"), /* Modern Browsers */
+       url("../fonts/livvic-v8-latin-700.ttf") format("truetype"), /* Safari, Android, iOS */
+       url("../fonts/livvic-v8-latin-700.svg#Livvic") format("svg"); /* Legacy iOS */
+}
+
+:root {
+  --color-primary-midnight-green: #014E56;
+  --color-primary-light-coral: #f67e7e;
+  --color-primary-white: #fff;
+  --color-secondary-rapture-blue: #79c8c7;
+  --color-secondary-police-blue: #2c6269;
+  --color-secondary-deep-jungle-green: #004047;
+  --color-secondary-sacramento: #012f34;
+  --color-secondary-dark-green: #002529;
+  --main-font: "Livvic", "Arial", sans-serif;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.container {
+  max-width: 1150px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: var(--main-font);
+  background-color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  color: var(--color-primary-white);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* HEADER */
+.site__header{
+  background-color: var(--color-primary-midnight-green);
+padding-top: 73px;
+padding-bottom: 73px;
+}
+
+.header__container{
+  display: flex;
+  align-items: center;
+}
+.logo__img{
+  display: block;
+}
+.header__logo-link{
+  margin-right: 80px;
+}
+.sitenav {
+  margin-right: auto;
+}
+.sitenav__list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.sitenav__link{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  transition: color 0.4s ease;
+}
+.sitenav__link:hover{
+  color: var(--color-primary-light-coral);
+}
+.sitenav__item:not(:last-child){
+  margin-right: 40px;
+}
+.button{
+  padding: 10px 33px;
+  font-size: 18px;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: lowercase;
+  white-space: nowrap;
+  border: 2px solid;
+  border-radius: 24px;
+  background-color: transparent;
+  transition: color .3s ease,
+    background-color .3s ease;
+}
+
+.header-btn {
+  border-color: var(--color-primary-white);
+  color: var(--color-primary-white);
+}
+
+.header-btn:hover {
+  color: var(--color-secondary-dark-green);
+  background-color: var(--color-primary-white);
+}
+/* MAIN- HERO */
+.hero{
+  background-color: var(--color-primary-midnight-green);
+padding-top: 56px;
+padding-bottom: 250px;
+overflow: hidden;
+}
+.hero__content{
+  display: flex;
+  }
+.hero__heading{
+  margin: 0;
+  padding: 0;
+  margin-right: 30px;
+  max-width: 635px;
+  font-size: 103px;
+  line-height: 100px;
+  font-weight: bold;
+}
+.hero__heading span {
+  color: var(--color-primary-light-coral);
+}
+.hero__desc{
+  margin: 0;
+  padding: 0;
+max-width: 445px;
+font-size: 18px;
+line-height: 28px;
+display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.hero__desc::before {
+content: '';
+display: block;
+  width: 50px;
+  height: 4px;
+  background-color: var(--color-secondary-rapture-blue);
+  }
+
+  .hero__container{
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero__container::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -265px;
+    z-index: 1;
+    display: block;
+    width: 200px;
+    height: 200px;
+    background-image: url('../img/bg-disk.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero__container::after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 355px;
+    right: 0;
+    display: block;
+    width: 358px;
+    height: 200px;
+    background-image: url('../img/bg-red-disk.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
