@@ -254,7 +254,6 @@ img {
   padding-top: 198px;
   padding-bottom: 140px;
   background-color: var(--color-secondary-sacramento);
-  background-color: var(--color-secondary-deep-jungle-green);
   background-image: url('../img/bg-feature.svg');
   background-repeat: no-repeat;
   background-size: 200px 244px;
@@ -272,9 +271,6 @@ img {
 font-size: 48px;
 line-height: 48px;
 position: relative;
-/* display: flex;
-flex-direction: column;
-justify-content: space-between; */
 }
 
 
@@ -282,10 +278,10 @@ justify-content: space-between; */
 content: '';
 display: block;
 position: absolute;
+top: -56px;
 width: 50px;
 height: 4px;
 background-color: var(--color-primary-light-coral);
-top: -56px;
 
 }
 .features__list{
@@ -324,7 +320,11 @@ opacity: 0.8;
   align-items: center;
 }
 .features__item::before{
-  padding: 38px;
+  /* padding: 38px; */
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  background-size: contain;
   margin-right: 23px;
   background-repeat: no-repeat;
   display: block;
@@ -339,9 +339,94 @@ opacity: 0.8;
   content: "";
 }
 .features__item:last-child:before{
-
   margin-right: 23px;
   display: block;
   background-image: url("../img/productivity-icon.svg");
   content: "";
+}
+/* REVIEWS */
+
+.reviews{
+  padding: 140px 0;
+  background-color: var(--color-secondary-deep-jungle-green);
+background-image: url(../img/bg-rviews-left-top.svg), url(../img/bg-reviews-right.svg);
+background-repeat: no-repeat;
+background-size: 147px 100px, 200px 200px;
+background-position: calc(50% - 690px) 0, calc(50% + 660px) 640px;
+}
+.reviews__heading{
+  margin: 0;
+  max-width: 932px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 48px;
+  color: var(--color-primary-white);
+  text-align: center;
+  margin-bottom: 56px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.reviews__heading span{
+color: var(--color-secondary-rapture-blue);
+}
+
+/* LIST */
+
+.reviews__list{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+.reviews__item{
+  max-width: 350px;
+  text-align: center;
+}
+.reviews__item:not(:last-child){
+  margin-right: 30px;
+}
+
+.review__blockquote{
+  margin: 0;
+  font-weight: 600;
+font-size: 15px;
+line-height: 25px;
+color: var(--color-primary-white);
+margin-bottom: 24px;
+}
+
+.review__title{
+  margin: 0;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color:var(--color-secondary-rapture-blue);
+  margin-bottom: 2px;
+}
+
+.review__desc{
+  margin: 0;
+  font-style: italic;
+font-weight: 500;
+font-size: 13px;
+line-height: 18px;
+color: var(--color-primary-white);
+}
+.review{
+  padding-top: 36px;
+  background-image: url(../img/bg-vergul.svg);
+  background-repeat: no-repeat;
+  background-size: 67px 56px;
+  background-position: center top;
+}
+
+.rewiew__img{
+  display: inline-block;
+  border-radius: 50%;
+  margin-top: 32px;
+
 }
