@@ -660,6 +660,7 @@ img {
 .team-member__card--rotated .directors__card-back {
   /* transform: scale(1);
   transform-origin: center bottom; */
+  transform: rotateY(360deg);
 }
 
 .card-back__team-name{
