@@ -553,7 +553,7 @@ img {
 
 .about__hero-desc::before{
   background-color: var(--color-primary-light-coral);
-  justify-content: space-between;
+  /* justify-content: space-between; */
   position: absolute;
   top: 0px;
 }
@@ -602,28 +602,107 @@ img {
 
 .directors__item{
   width: 350px;
-  margin-right: 20px;
-  background-color: var(--color-secondary-sacramento);
+  margin-right: 30px;
   margin-bottom: 76px;
-
+ }
+.directors__item:nth-child(3n){
+  margin-right: 0;
 }
 
-
-.director{
+.directors__box{
   position: relative;
   z-index: 1;
+  perspective: 1000px;
+}
+
+.directors__card-front{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px 56px;
+  padding-bottom: 56px;
+  background-color: var(--color-secondary-sacramento);
+  backface-visibility: hidden;
+  transition: transform 0.4s ease;
+}
+
+.team-member__card--rotated .directors__card-front {
+  transform: rotateY(180deg);
+}
+
+.directors__card-back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  left: 0;
+  top: 0;
   text-align: center;
+  padding: 32px 24px 56px;
+  padding-bottom: 56px;
+  background-color: var(--color-secondary-dark-green);
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  transition: transform 0.4s ease;
+  overflow: auto;
+}
+
+.directors__card-back::-webkit-scrollbar {
+  width: 0.4em;
+}
+
+.directors__card-back::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-midnight-green);
+  outline: 1px solid var(--color-secondary-dark-green);
+}
+
+.team-member__card--rotated .directors__card-back {
+  transform: scale(1);
+  transform-origin: center bottom;
+}
+
+.card-back__team-name{
+  margin: 0;
+margin-bottom: 8px;
+font-weight: bold;
+font-size: 18px;
+line-height: 28px;
+color: var(--color-secondary-rapture-blue);
+}
+
+.card-back__blockquote{
+  margin: 0;
+  font-weight: 600;
+font-size: 15px;
+line-height: 25px;
+color: var(--color-primary-white);
+margin-bottom: 24px;
+}
+
+.card-back__link{
+  color: var(--color-primary-white);
+  transition: color 0.4s ease;
+}
+
+.card-back__link:hover{
+  color: var(--color-primary-light-coral);
+}
+
+.card-back__link:not(:last-child){
+  margin-right: 16px;
 }
 .directors__box{
-  padding: 32px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .directors__img{
-  display: inline-block;
+  display: block;
   margin: 0;
   border-radius: 50%;
   margin-bottom: 16px;
-  text-align: center;
 }
 
 .directors__title{
@@ -645,18 +724,28 @@ img {
 
 .directors__button{
   position: absolute;
-  bottom: 0;
-  transform: translate(-50%, 50%);
+  z-index: 10;
+  left: calc(50% - 28px);
+  bottom: -28px;
   width: 56px;
   height: 56px;
-  background: var(--color-primary-light-coral)
-  url(../img/plus.svg) center / 16px no-repeat;
-  border-radius: 50%;
+  padding: 0;
   border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  border-radius: 50%;
+  background-color: var(--color-primary-light-coral);
+  background-image: url(../img/plus.svg);
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: center center;
+  transition: transform 0.4s ease,
+    background-color 0.4s ease;
 }
 .directors__button:hover{
+  background-color: var(--color-secondary-rapture-blue);
+}
+
+.team-member__card--rotated .directors__button{
+  transform: rotate(45deg);
   background-color: var(--color-secondary-rapture-blue);
 }
 
@@ -664,9 +753,9 @@ img {
 .partners{
   padding-top: 140px;
   padding-bottom: 140px;
-background-color:var(--color-secondary-sacramento);
-background-image: url(../img/clients-bg.svg);
-background-repeat: no-repeat;
+  background-color:var(--color-secondary-sacramento);
+  background-image: url(../img/clients-bg.svg);
+  background-repeat: no-repeat;
   background-size: 200px 200px;
   background-position: calc(50% - 660px) 0;
 }
@@ -676,9 +765,9 @@ background-repeat: no-repeat;
   font-weight: bold;
   font-size: 48px;
   line-height: 48px;
-   text-align: center;
-   color: var(--color-primary-white);
-   margin-bottom: 64px;
+  text-align: center;
+  color: var(--color-primary-white);
+  margin-bottom: 64px;
 }
 
 .partners__list{
