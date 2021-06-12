@@ -658,8 +658,8 @@ img {
 }
 
 .team-member__card--rotated .directors__card-back {
-  transform: scale(1);
-  transform-origin: center bottom;
+  /* transform: scale(1);
+  transform-origin: center bottom; */
 }
 
 .card-back__team-name{
@@ -782,3 +782,9 @@ margin-bottom: 24px;
   margin-right: 80px;
 }
 
+/* CONTACT-PAGE */
+.contact-hero{
+  padding-top: 47px;
+  padding-bottom: 120px;
+  background-color: var(--color-primary-midnight-green);
+}
