@@ -787,4 +787,114 @@ margin-bottom: 24px;
   padding-top: 47px;
   padding-bottom: 120px;
   background-color: var(--color-primary-midnight-green);
+  background-image: url(../img/contact-bg-red.svg), url(../img/about-directors-right-bg.svg);
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  background-position: calc(50% + 58%) 100%, calc(50% - 58%) 50px;
+}
+
+.contact-heading{
+  margin: 0;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 100px;
+}
+
+.contact-desc{
+  margin: 0;
+  font-weight: bold;
+font-size: 32px;
+line-height: 48px;
+color: var(--color-primary-light-coral);
+margin-bottom: 32px;
+}
+
+.contact__feature-list{
+  width: 540px;
+  margin: 0;
+}
+.contact__feature-item:not(:last-child){
+  margin-bottom: 8px;
+}
+
+.contact__feature-title{
+  margin: 0;
+  color: var(--color-primary-white);
+}
+
+.contact__container{
+  display: flex;
+  align-items: center;
+}
+
+.contact__reg-form{
+width: 542px;
+margin-left: auto;
+}
+
+.field{
+  border: none;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid var(--color-primary-white);
+  background-color: transparent;
+  padding-left: 14px;
+  padding-bottom: 17px;
+  color: var(--color-primary-white);
+  font-weight: 600;
+font-size: 15px;
+line-height: 25px;
+letter-spacing: -0.115385px;
+}
+.input-group{
+  margin-bottom: 24px;
+}
+
+::placeholder{
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: -0.115385px;
+ color: var(--color-primary-white);
+  mix-blend-mode: normal;
+  opacity: 0.6;
+}
+.textarea-field{
+  resize: vertical;
+}
+
+.button__submit{
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: var(--color-primary-white);
+  color: var(--color-secondary-deep-jungle-green);
+  font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+}
+
+.button__submit:hover{
+  background-color: var(--color-secondary-rapture-blue);
+  color: var(--color-secondary-dark-green);
+}
+input:not(:placeholder-shown):not(:focus):invalid{
+  border-color: var(--color-primary-light-coral);
+
+}
+
+input:not(:placeholder-shown):not(:focus):valid{
+  border-color: var(--color-secondary-rapture-blue);
+}
+
+input:not(:placeholder-shown):not(:focus):invalid ~ .error-text{
+  display: block;
+}
+.error-text{
+font-style: italic;
+font-weight: bold;
+font-size: 10px;
+line-height: 13px;
+color: var(--color-primary-light-coral);
+display: none;
+margin-top: 8px;
 }
